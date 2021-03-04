@@ -28,7 +28,26 @@ ol {
   margin: 0;
   padding: 0;
 }
-
+img {
+  display: block;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid tomato;
+}
 /* ===============  COMPONENTS  =============== */
 .list {
   list-style: none;
@@ -56,6 +75,11 @@ ol {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+.page-header .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
 .logo .logo-header {
   color: var(--primary-black-color);
 }
@@ -67,9 +91,25 @@ ol {
 /* ===============  HEADER & FOOTER  =============== */
 .page-header {
   background-color: var(--white-background);
+  border: 1px solid #ececec;
 }
 .page-footer {
   background-color: var(--black-background);
+}
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 .nav-list .link,
 .page-header .contacts {
@@ -79,6 +119,11 @@ ol {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding: 32px 0;
+}
+.page-header .contacts:not(:last-child) {
+  margin-left: auto;
+  margin-right: 50px;
 }
 .page-footer .contacts {
   color: rgba(255, 255, 255, 0.6);
