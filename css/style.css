@@ -63,9 +63,6 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 50px;
 }
 /* ===============  END COMPONENTS  =============== */
 
@@ -252,11 +249,23 @@ img {
   padding-top: 47px;
   padding-bottom: 47px;
 }
+.our-job .title {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
 .our-job .job-list {
   display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
 }
-.our-job .item:not(:last-child) {
+/* .our-job .item:not(:last-child) {
   margin-right: 30px;
+} */
+.our-job .item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);
 }
 /* ===============  END WHAT ARE WE DOING  =============== */
 
@@ -266,18 +275,28 @@ img {
   padding-top: 47px;
   padding-bottom: 94px;
 }
+.our-team .title {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
 .our-team .team-list {
   display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .team-card {
   background: var(--white-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 4 - 30px);
 }
-.our-team .team-card:not(:last-child) {
+/* .our-team .team-card:not(:last-child) {
   margin-right: 30px;
-}
+} */
 .our-team .card {
   margin-right: auto;
   margin-left: auto;
@@ -304,7 +323,19 @@ img {
 /* ===============  END OUR TEAM  =============== */
 
 /* ===============  PORTFOLIO  =============== */
+.portfolio {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio .filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 .filter-list .filter {
+  padding: 6px 22px;
   color: var(--primary-color);
   background-color: var(--grey-background);
   font-family: inherit;
@@ -316,6 +347,9 @@ img {
   border: none;
   cursor: pointer;
 }
+.filter-list > .item:not(:last-child) {
+  margin-right: 8px;
+}
 .filter-list .filter:hover,
 .filter-list .filter:focus {
   background: var(--accent-color);
@@ -324,10 +358,23 @@ img {
   border-radius: 4px;
   color: var(--primary-white-color);
 }
-.project-list .project {
-  background: var(--white-background);
+
+.portfolio .box {
+  padding: 20px 24px;
   border: 1px solid var(--portfolio-project-background);
+}
+.portfolio .project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.portfolio .project {
+  background: var(--white-background);
   box-sizing: border-box;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);
 }
 .project-list .title {
   color: var(--primary-color);
@@ -335,6 +382,7 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  text-align: left;
 }
 .project-list .description {
   color: var(--secondary-color);
@@ -342,5 +390,6 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+  text-align: left;
 }
 /* ===============  END PORTFOLIO  =============== */ ;
